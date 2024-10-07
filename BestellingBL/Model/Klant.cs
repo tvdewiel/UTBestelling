@@ -10,6 +10,14 @@ namespace BestellingBL.Model
 {
     public class Klant
     {
+
+        public Klant(int id, string naam, string email)
+        {
+            Id = id;
+            Naam = naam;
+            Email = email;
+        }
+
         private int id;
         public int Id
         {
@@ -31,14 +39,6 @@ namespace BestellingBL.Model
             }
         }
         private string email;
-
-        public Klant(int id, string naam, string email)
-        {
-            this.id = id;
-            this.naam = naam;
-            this.email = email;
-        }
-
         public string Email
         {
             get { return email; }

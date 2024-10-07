@@ -27,7 +27,7 @@ namespace TestProjectModel
         public void Test_Id_InValid(int id)
         {
             Klant klant = new Klant(10, "Jos", "jos@gmail.com");
-            var ex=Assert.Throws<BestellingException>(()=> klant.Id = id);
+            var ex = Assert.Throws<BestellingException>(() => klant.Id = id);
             Assert.Equal("id<0", ex.Message);
         }
         [Theory]
@@ -50,6 +50,31 @@ namespace TestProjectModel
         {
             Klant klant = new Klant(10, "Jos", "jos@gmail.com");
             Assert.Throws<BestellingException>(() => klant.Email = email);
+        }
+        [Fact]
+        public void Test_ctor_Valid()
+        {
+            Klant klant = new Klant(10, "Jos", "jos@gmail.com");
+            Assert.Equal(10, klant.Id);
+            Assert.Equal("Jos", klant.Naam);
+            Assert.Equal("jos@gmail.com", klant.Email);
+        }
+        [Theory]
+        [InlineData(0, "Jos", "jos@gmail.com")]
+        [InlineData(-1, "Jos", "jos@gmail.com")]
+        [InlineData(10, "", "jos@gmail.com")]
+        [InlineData(10, "  ", "jos@gmail.com")]
+        [InlineData(10, null, "jos@gmail.com")]
+        [InlineData(10, "Jos", "@gmail.com")]
+        [InlineData(10, "Jos", "jos@gmailcom")]
+        [InlineData(10, "Jos", "jos@")]
+        [InlineData(10, "Jos", "")]
+        [InlineData(10, "Jos", "  ")]
+        [InlineData(10, "Jos", null)]
+        public void Test_ctor_InValid(int id, string naam, string email)
+        {
+            Assert.Throws<BestellingException>(() => new Klant(id, naam, email));
+
         }
     }
 }

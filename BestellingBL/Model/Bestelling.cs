@@ -48,5 +48,11 @@ namespace BestellingBL.Model
                 producten[product] -= aantal;
             else producten.Remove(product);
         }
+        public double Prijs()
+        {
+            double prijs = 0;
+            foreach(KeyValuePair<Product,int> kvp in producten) prijs += (kvp.Value*kvp.Key.Prijs);
+            return prijs;
+        }
     }
 }
