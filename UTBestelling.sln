@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestellingBL", "BestellingBL\BestellingBL.csproj", "{F7667498-532C-4303-A78B-D9DCA0B90B2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectModel", "TestProjectModel\TestProjectModel.csproj", "{88CD10FE-EEE3-4346-B8F8-5EACD63C7A4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7667498-532C-4303-A78B-D9DCA0B90B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7667498-532C-4303-A78B-D9DCA0B90B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7667498-532C-4303-A78B-D9DCA0B90B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7667498-532C-4303-A78B-D9DCA0B90B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CD10FE-EEE3-4346-B8F8-5EACD63C7A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CD10FE-EEE3-4346-B8F8-5EACD63C7A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CD10FE-EEE3-4346-B8F8-5EACD63C7A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CD10FE-EEE3-4346-B8F8-5EACD63C7A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AC7ADE4-8D24-4082-8E79-C19C0DA5FD1C}
+	EndGlobalSection
+EndGlobal
